@@ -39,8 +39,8 @@ public class ManagerAnimal {
     public void searchAnimal(String ten) {
         for (int i = 0; i < numberCurrentAnimal; i++) {
             if (animals[i].getTen().equalsIgnoreCase(ten)) {
-                System.out.println("Tên động vật cần tìm " + animals[i].ten);
-                System.out.println("Tuổi động vật cần tìm " + animals[i].tuoi);
+                System.out.println("Tên động vật cần tìm: " + animals[i].ten);
+                System.out.println("Tuổi động vật cần tìm: " + animals[i].tuoi);
                 return;
             }
         }
