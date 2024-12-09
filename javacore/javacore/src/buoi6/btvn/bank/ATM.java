@@ -10,15 +10,15 @@ public class ATM {
         Scanner sc = new Scanner(System.in);
         Account[] accounts = new Account[10];
         int id;
-        double lai = 4.5/100;
+        double lai = 4.5 / 100;
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Date date = sdf.parse("09/12/2024");
         boolean tiepTuc = true;
         for (int i = 0; i < 10; i++) {
-            accounts[i] = new Account(i,100,lai,date);
+            accounts[i] = new Account(i, 100, lai, date);
 
         }
-        while (tiepTuc){
+        while (tiepTuc) {
             System.out.print("Nhập ID (từ 0 đến 9): ");
             id = sc.nextInt();
             sc.nextLine();
@@ -59,14 +59,13 @@ public class ATM {
                     }
 
                 }
-            }else {
+            } else {
 
                 System.out.println("ID không hợp lệ. Vui lòng nhập lại!");
             }
 
 
         }
-        sc.close();
 
     }
 }

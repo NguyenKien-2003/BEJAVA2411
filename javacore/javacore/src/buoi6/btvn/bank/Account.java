@@ -14,6 +14,7 @@ public class Account {
         this.annualInterestRate = annualInterestRate;
         this.dateCreated = dateCreated;
     }
+
     public int getId() {
         return id;
     }
@@ -47,16 +48,19 @@ public class Account {
     }
 
     public double getMonthlyInterestRate() {
-        return annualInterestRate/12;
+        return annualInterestRate / 12;
 
     }
+
     public double getMonthlyInterest() {
-        return balance*getMonthlyInterestRate();
+        return balance * getMonthlyInterestRate();
     }
+
     public void withdraw(double amount) {
         balance -= amount;
         System.out.println("Đã rút : " + amount);
     }
+
     public void deposit(double amount) {
         balance += amount;
         System.out.println("Đã nạp : " + amount);
