@@ -5,22 +5,26 @@ import java.util.Scanner;
 public class ManagerAnimal {
     private Animal[] animals;
     private int numberCurrentAnimal;
+
     public ManagerAnimal(int n) {
         this.animals = new Animal[n];
         this.numberCurrentAnimal = 0;
     }
+
     public void addAnimal(Animal animal) {
         if (numberCurrentAnimal == animals.length) {
             moRongDanhSach();
         }
         animals[numberCurrentAnimal++] = animal;
     }
+
     private void moRongDanhSach() {
         Animal[] newAnimals = new Animal[animals.length + 10];
         System.arraycopy(animals, 0, newAnimals, 0, animals.length);
         animals = newAnimals;
         System.out.println("Danh sách hiện tại có " + animals.length + "slot");
     }
+
     public void hienThiDanhSachDongVat() {
         if (numberCurrentAnimal == 0) {
             System.out.println("No animals in the zoo.");
@@ -28,9 +32,10 @@ public class ManagerAnimal {
         }
         for (int i = 0; i < numberCurrentAnimal; i++) {
 
-            System.out.println("Tên: " +animals[i].ten+ " Tuổi: " +animals[i].tuoi);
+            System.out.println("Tên: " + animals[i].ten + " Tuổi: " + animals[i].tuoi);
         }
     }
+
     public void searchAnimal(String ten) {
         for (int i = 0; i < numberCurrentAnimal; i++) {
             if (animals[i].getTen().equalsIgnoreCase(ten)) {
@@ -56,6 +61,7 @@ public class ManagerAnimal {
         }
         System.out.println("Không tìm thấy " + ten);
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập vào tổng số lượng thú: ");
@@ -65,7 +71,7 @@ public class ManagerAnimal {
         ManagerAnimal manager = new ManagerAnimal(n);
 
 
-        do{
+        do {
             System.out.println("------------------------------");
             System.out.println("THẾ GIỚI ĐỘNG VẬT");
             System.out.println("1. Nhập vào Lion: ");
@@ -85,7 +91,7 @@ public class ManagerAnimal {
                     String lionName = sc.nextLine();
                     System.out.print("Enter age of the Lion: ");
                     String lionAge = sc.nextLine();
-                    manager.addAnimal(new Lion(lionName,lionAge));
+                    manager.addAnimal(new Lion(lionName, lionAge));
 
                     break;
                 case 2:
@@ -105,26 +111,25 @@ public class ManagerAnimal {
                 case 4:
                     manager.hienThiDanhSachDongVat();
                     break;
-                    case 5:
-                        System.out.println("Nhập vào tên động vật muốn tìm: ");
-                        String tenCanTim = sc.nextLine();
-                        manager.searchAnimal(tenCanTim);
-                        break;
-                        case 6:
-                            System.out.println("Nhập vào tên động vật muốn xóa:");
-                            String tenCanXoa = sc.nextLine();
-                            manager.removeAnimal(tenCanXoa);
-                            break;
-                            case 7:
-                                tiepTuc = false;
-                                break;
-
+                case 5:
+                    System.out.println("Nhập vào tên động vật muốn tìm: ");
+                    String tenCanTim = sc.nextLine();
+                    manager.searchAnimal(tenCanTim);
+                    break;
+                case 6:
+                    System.out.println("Nhập vào tên động vật muốn xóa:");
+                    String tenCanXoa = sc.nextLine();
+                    manager.removeAnimal(tenCanXoa);
+                    break;
+                case 7:
+                    tiepTuc = false;
+                    break;
 
 
             }
 
 
-        }while (tiepTuc == true);
+        } while (tiepTuc == true);
     }
 
 }
