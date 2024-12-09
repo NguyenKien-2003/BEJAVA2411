@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="btvn-buoi3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/javacore/javacore/src/buoi2/btvn-buoi2.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
