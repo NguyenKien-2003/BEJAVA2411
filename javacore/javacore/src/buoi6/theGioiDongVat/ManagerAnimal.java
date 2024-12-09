@@ -50,11 +50,10 @@ public class ManagerAnimal {
     public void removeAnimal(String ten) {
         for (int i = 0; i < numberCurrentAnimal; i++) {
             if (animals[i].getTen().equalsIgnoreCase(ten)) {
-                // Xóa và dịch chuyển các phần tử còn lại
                 for (int j = i; j < numberCurrentAnimal - 1; j++) {
                     animals[j] = animals[j + 1];
                 }
-                animals[--numberCurrentAnimal] = null; // Giảm số lượng và giải phóng vị trí cuối
+                animals[--numberCurrentAnimal] = null;
                 System.out.println("Động vật " + ten + " đã được xóa.");
                 return;
             }
