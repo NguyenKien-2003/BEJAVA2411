@@ -17,18 +17,17 @@ public class Student {
     }
 
     public void showInfo() {
-        System.out.println("FullName: " + this.fullName);
-        System.out.println("Age: " + this.age);
-        System.out.println("Student Code: " + this.studentCode);
+        System.out.println("Tên sinh viên: " + this.fullName);
+        System.out.println("Tuổi: " + this.age);
+        System.out.println("Mã sinh viên: " + this.studentCode);
     }
 
-
     public void enterInfo() {
-        System.out.println("FullName: ");
+        System.out.println("Nhập tên sinh viên: ");
         this.fullName = new Scanner(System.in).nextLine();
-        System.out.println("Age: ");
+        System.out.println("Nhập tuổi sinh viên: ");
         this.age = new Scanner(System.in).nextInt();
-        System.out.println("Student Code: ");
+        System.out.println("Nhập mã sinh viên: ");
         this.studentCode = new Scanner(System.in).nextInt();
 
     }

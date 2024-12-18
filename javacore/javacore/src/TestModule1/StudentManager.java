@@ -51,7 +51,7 @@ public class StudentManager {
                         reSizeArrayStudent();
                         this.students[currentStudent] = student;
                         currentStudent++;
-                        System.out.println("Đã thêm học sinh thứ :" + currentStudent + " thành công");
+                        System.out.println("Đã thêm học sinh thứ :" + (currentStudent +1) + " thành công");
                     }
                     break;
                 case 2:
@@ -159,7 +159,7 @@ public class StudentManager {
             if (students[i] == null) {
                 continue;
             }
-            System.out.println("------------- Student: " + i);
+            System.out.println("Student: " + i);
             students[i].showInfo();
         }
     }
