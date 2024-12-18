@@ -1,4 +1,5 @@
 package TestModule1;
+
 import java.util.Scanner;
 
 public class Main {
@@ -6,8 +7,8 @@ public class Main {
         StudentManager sm = new StudentManager();
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập vào chức năng: ");
-        int type = 0 ;
-        System.out.println("-----Menu Quản Lý Danh Sách Sinh Viên-----");
+        int type = 0;
+        System.out.println("MENU QUẢN LÝ DANH SÁCH SINH VIÊN");
 
         do {
             System.out.println("1. Thêm sinh viên vào danh sách.");
@@ -40,6 +41,6 @@ public class Main {
 
             }
         }
-        while(type != 6);
+        while (type != 6);
     }
 }
