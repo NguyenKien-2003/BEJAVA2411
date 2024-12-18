@@ -51,7 +51,7 @@ public class StudentManager {
                         reSizeArrayStudent();
                         this.students[currentStudent] = student;
                         currentStudent++;
-                        System.out.println("Đã thêm học sinh thứ :" + (currentStudent +1) + " thành công");
+                        System.out.println("Đã thêm học sinh thứ :" + (currentStudent + 1) + " thành công");
                     }
                     break;
                 case 2:
