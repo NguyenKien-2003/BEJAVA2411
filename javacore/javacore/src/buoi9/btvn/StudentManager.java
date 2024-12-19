@@ -19,7 +19,6 @@ public class StudentManager {
         studentIds.add(id);
     }
 
-    // Xóa sinh viên
     public void deleteStudent(String id) {
         boolean removed = false;
         for (Student student : students) {
@@ -35,7 +34,6 @@ public class StudentManager {
         }
     }
 
-    // Hiển thị danh sách sinh viên
     public void showStudents() {
         if (students.isEmpty()) {
             throw new RuntimeException("No students available.");
@@ -45,7 +43,6 @@ public class StudentManager {
         }
     }
 
-    // Tìm kiếm sinh viên theo tên
     public void searchStudentByName(String name) {
         boolean found = false;
         for (Student student : students) {
@@ -59,7 +56,6 @@ public class StudentManager {
         }
     }
 
-    // Sắp xếp danh sách sinh viên theo điểm thi
     public void sortStudentsByGrade() {
         if (students.isEmpty()) {
             throw new RuntimeException("No students to sort.");
