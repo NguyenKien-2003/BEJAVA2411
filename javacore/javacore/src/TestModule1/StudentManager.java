@@ -11,7 +11,7 @@ public class StudentManager {
 
     private final int DEFAULT_NEW_SIZE = 10;
 
-    public boolean isstudentCodeExist(int studentCode) {
+    public boolean isStudentCodeExist(int studentCode) {
         for (int i = 0; i < currentStudent; i++) {
             if (students[i].getStudentCode() == studentCode) {
                 return true;
@@ -44,7 +44,7 @@ public class StudentManager {
                     Student student = new Student();
                     System.out.println("Nhập thông tin học sinh");
                     student.enterInfo();
-                    if (isstudentCodeExist(student.getStudentCode())) {
+                    if (isStudentCodeExist(student.getStudentCode())) {
                         System.out.println("Mã sinh viên " + student.getStudentCode() + " đã tồn tại. Không thể thêm sinh viên!!!.");
                     } else {
 
